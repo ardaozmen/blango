@@ -1,7 +1,5 @@
 # blango
 
-Starting point for the Advanced Django course. This is the equivalent of the following command:
+#### Overview
 
-```bash
-$ django-admin.py startproject blango
-```
+The aim of this project is to advance the Django blog application developed in the cloud-based Codio environment, for learning and development purposes. It is an enhanced blog application.
