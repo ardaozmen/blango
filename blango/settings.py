@@ -52,6 +52,7 @@ class Dev(Configuration):
         'blog',
         'crispy_forms',
         'crispy_bootstrap5',
+        'debug_toolbar',
     ]
 
     CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
@@ -66,6 +67,7 @@ class Dev(Configuration):
         'django.contrib.auth.middleware.AuthenticationMiddleware',
         'django.contrib.messages.middleware.MessageMiddleware',
         #'django.middleware.clickjacking.XFrameOptionsMiddleware',
+        "debug_toolbar.middleware.DebugToolbarMiddleware",
     ]
 
     ROOT_URLCONF = 'blango.urls'
@@ -147,6 +149,8 @@ class Dev(Configuration):
     ADMINS = [("Ben Shaw", "ben@example.com"), ("Leo Lucio", "leo@example.com")]
 
     DJANGO_ADMINS="Ben Shaw,ben@example.com;Leo Lucio,leo@example.com"
+
+    INTERNAL_IPS = ["192.168.10.226"]
 
     LOGGING = {
         "version": 1,
