@@ -29,7 +29,9 @@ class Dev(Configuration):
 
     # SECURITY WARNING: don't run with debug turned on in production!
     DEBUG = values.BooleanValue(True)
-
+    EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+    ACCOUNT_ACTIVATION_DAYS = 7
+    #REGISTRATION_OPEN = False # Default True
     # For Codio Environment
     ALLOWED_HOSTS = values.ListValue(["localhost", "0.0.0.0", ".codio.io"])
     X_FRAME_OPTIONS = 'ALLOW-FROM ' + os.environ.get('CODIO_HOSTNAME') + '-8000.codio.io'
