@@ -15,7 +15,7 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         field = ["first_name", "last_name", "email"]
-
+        
 
 class CommentSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField(required=False)
